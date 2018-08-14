@@ -1,4 +1,10 @@
 language: csharp
 mono: none
-dotnet: 2.1.302
+dotnet: 2.1.2
 solution: TestCI.sln
+
+install:
+  - dotnet restore
+  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+script:
+  - dotnet build
