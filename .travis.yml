@@ -13,9 +13,9 @@ script:
   - dotnet test
   - cd ../TestCI
   - dotnet publish --configuration Release --output ./output
-  - docker build -t "$DOCKER_USERNAME"/TestCI .
+  - docker build -t "$DOCKER_USERNAME"/testci .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push nleo/TestCI
+  - docker push nleo/testci
 #deploy:
 #  provider: heroku
 #  api_key:
