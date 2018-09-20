@@ -12,7 +12,7 @@ script:
   - cd ./UnitTests
   - dotnet test
   - cd ../TestCI
-  - dotnet publish --configration Release --output ./output
+  - dotnet publish --configuration Release --output ./output
   - docker build -t nleo/TestCI .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push nleo/TestCI
