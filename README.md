@@ -1,2 +1,2 @@
 # MyPractices
-Just use for personal testing tools
+Used for testing Travis-CI works with GttHub and Azure
