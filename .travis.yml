@@ -13,7 +13,7 @@ script:
   - dotnet test
   - cd ../TestCI
   - dotnet publish --configuration Release --output ./output
-  - docker build -t nleo/TestCI .
+  - docker build -t "$DOCKER_USERNAME"/TestCI .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push nleo/TestCI
 #deploy:
